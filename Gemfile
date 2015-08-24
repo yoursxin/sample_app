@@ -47,5 +47,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 #hxx add
 gem 'coffee-script-source', '1.8.0'
+gem 'zip'
 
 
