@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
   def feed
-    Micropost.where("user_id=?",id)
+    Micropost.from_users_followed_by(self)
   end
   def following?(other_user)
     self.relationships.find_by(followed_id: other_user.id)

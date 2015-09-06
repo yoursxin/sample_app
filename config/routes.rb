@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   resources :sessions, only:[:new, :create, :destroy]
   resources :microposts, only:[:create, :destroy]
+  resources :relationships, only:[:create, :destroy]
 
   root to: 'static_pages#home'
   match '/signup', to: 'users#new', via: 'get'  
